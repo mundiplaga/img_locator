@@ -14,7 +14,7 @@ down () {
 
 # get a shell - can be used multiple times
 shell () {
-  up && docker-compose exec img-locator /bin/bash
+  up && docker-compose exec img-locator //bin/bash
 }
 
 deploy () {
