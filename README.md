@@ -10,6 +10,8 @@ Use poetry to control package versions
 
 Deploy to Cloud Run using the `./Projectfile deploy` command. Change this to your own GCP Project.
 
+Google API Key required for `Maps Embed API`
+
 ## Local Development
 
 Use dotenv to handle your Google API Key secret.

@@ -8,13 +8,13 @@ ENV PATH="$POETRY_HOME/bin:$SRC_PATH/.venv/bin:$PATH"
 RUN apt-get update && \
     apt-get -y install curl libmagic-dev
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.8.4
 
 COPY ./poetry.lock ./pyproject.toml ./
 
-RUN POETRY_VIRTUALENVS_CREATE=false poetry install
-
 WORKDIR /app
+
+RUN POETRY_VIRTUALENVS_CREATE=false poetry install
 
 COPY . .
 
